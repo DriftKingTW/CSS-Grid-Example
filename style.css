@@ -51,12 +51,12 @@ a:hover {
   width: 100%;
   margin: 0;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
   .grid-container {
     grid-template-areas: "header  		 header 	 	 header header header" "bio         main 		   main   main   menu" "profile     main 			 main   main   menu" "rightfooter rightfooter footer footer menu";
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .grid-container {
     grid-template-areas: "header header header header header header" "menu   main 	 main 	main 	 main 	main" "menu   main 	 main 	main 	 main 	main" "menu   footer footer footer footer footer";
   }
@@ -67,9 +67,9 @@ a:hover {
     display: none;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .grid-container {
-    grid-template-rows: 60px auto 1fr 60px;
+    grid-template-rows: 80px auto 1fr 80px;
     grid-template-areas: "footer" "menu" "main" "header";
   }
 }
@@ -77,6 +77,11 @@ a:hover {
 .grid-container > div {
   padding: 20px;
   font-size: 24px;
+}
+@media (max-width: 992px) {
+  .grid-container > div {
+    font-size: 16px;
+  }
 }
 
 #avator {

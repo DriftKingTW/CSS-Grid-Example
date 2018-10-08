@@ -51,7 +51,7 @@ a:hover {
 		"menu   main   main   main        bio"
 		"menu   footer footer rightfooter rightfooter";
 
-	@media (max-width: 1200px) {
+	@media (max-width: 1440px) {
 		grid-template-areas:
 			"header  		 header 	 	 header header header"
 			"bio         main 		   main   main   menu"
@@ -59,7 +59,7 @@ a:hover {
 			"rightfooter rightfooter footer footer menu";
 	}
 
-	@media (max-width: 992px) {
+	@media (max-width: 1200px) {
 		grid-template-areas:
 			"header header header header header header"
 			"menu   main 	 main 	main 	 main 	main"
@@ -73,8 +73,8 @@ a:hover {
 		}
 	}
 
-	@media (max-width: 576px) {
-		grid-template-rows: 60px auto 1fr 60px;
+	@media (max-width: 992px) {
+		grid-template-rows: 80px auto 1fr 80px;
 		grid-template-areas:
 			"footer"
 			"menu"
@@ -91,6 +91,9 @@ a:hover {
 .grid-container > div {
 	padding: 20px;
 	font-size: 24px;
+	@media (max-width: 992px) {
+		font-size: 16px;
+	}
 }
 
 #avator {
