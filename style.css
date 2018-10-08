@@ -1,0 +1,97 @@
+html,
+body {
+  margin: 0;
+}
+
+a:hover {
+  color: white;
+}
+
+#header {
+  grid-area: header;
+}
+
+#menu {
+  grid-area: menu;
+  min-width: 200px;
+}
+
+#main {
+  grid-area: main;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+#rightfooter {
+  grid-area: rightfooter;
+  background-color: azure;
+}
+
+#profile {
+  grid-area: profile;
+}
+
+#username {
+  height: 30px;
+  text-align: center;
+}
+
+#bio {
+  grid-area: bio;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 60px 1fr 1fr 60px;
+  grid-template-areas: "header header header header   		header" "menu   main   main   main        profile" "menu   main   main   main        bio" "menu   footer footer rightfooter rightfooter";
+  min-height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+}
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-areas: "header  		 header 	 	 header header header" "bio         main 		   main   main   menu" "profile     main 			 main   main   menu" "rightfooter rightfooter footer footer menu";
+  }
+}
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-areas: "header header header header header header" "menu   main 	 main 	main 	 main 	main" "menu   main 	 main 	main 	 main 	main" "menu   footer footer footer footer footer";
+  }
+  .grid-container #bio, .grid-container #profile {
+    display: none;
+  }
+  .grid-container #rightfooter {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .grid-container {
+    grid-template-rows: 60px auto 1fr 60px;
+    grid-template-areas: "footer" "menu" "main" "header";
+  }
+}
+
+.grid-container > div {
+  padding: 20px;
+  font-size: 24px;
+}
+
+#avator {
+  height: 200px;
+  width: auto;
+  border: solid white 5px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */
