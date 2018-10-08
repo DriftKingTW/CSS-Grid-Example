@@ -31,6 +31,12 @@ a:hover {
 
 #profile {
 	grid-area: profile;
+	max-width: 300px;
+}
+
+#bio {
+	grid-area: bio;
+	max-width: 300px;
 }
 
 #username {
@@ -38,32 +44,28 @@ a:hover {
 	text-align: center;
 }
 
-#bio {
-	grid-area: bio;
-}
-
 .grid-container {
 	display: grid;
 	grid-template-rows: 60px 1fr 1fr 60px;
 	grid-template-areas:
-		"header header header header   		header"
+		"header header header header   	  header"
 		"menu   main   main   main        profile"
 		"menu   main   main   main        bio"
 		"menu   footer footer rightfooter rightfooter";
 
 	@media (max-width: 1440px) {
 		grid-template-areas:
-			"header  		 header 	 	 header header header"
-			"bio         main 		   main   main   menu"
-			"profile     main 			 main   main   menu"
+			"header  	 header 	 header header header"
+			"bio         main 		 main   main   menu"
+			"profile     main 		 main   main   menu"
 			"rightfooter rightfooter footer footer menu";
 	}
 
 	@media (max-width: 1200px) {
 		grid-template-areas:
 			"header header header header header header"
-			"menu   main 	 main 	main 	 main 	main"
-			"menu   main 	 main 	main 	 main 	main"
+			"menu   main 	 main 	main main 	main"
+			"menu   main 	 main 	main main 	main"
 			"menu   footer footer footer footer footer";
 		#bio, #profile {
 			display: none;

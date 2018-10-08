@@ -31,6 +31,12 @@ a:hover {
 
 #profile {
   grid-area: profile;
+  max-width: 300px;
+}
+
+#bio {
+  grid-area: bio;
+  max-width: 300px;
 }
 
 #username {
@@ -38,14 +44,10 @@ a:hover {
   text-align: center;
 }
 
-#bio {
-  grid-area: bio;
-}
-
 .grid-container {
   display: grid;
   grid-template-rows: 60px 1fr 1fr 60px;
-  grid-template-areas: "header header header header   		header" "menu   main   main   main        profile" "menu   main   main   main        bio" "menu   footer footer rightfooter rightfooter";
+  grid-template-areas: "header header header header   	  header" "menu   main   main   main        profile" "menu   main   main   main        bio" "menu   footer footer rightfooter rightfooter";
   min-height: 100vh;
   box-sizing: border-box;
   width: 100%;
@@ -53,12 +55,12 @@ a:hover {
 }
 @media (max-width: 1440px) {
   .grid-container {
-    grid-template-areas: "header  		 header 	 	 header header header" "bio         main 		   main   main   menu" "profile     main 			 main   main   menu" "rightfooter rightfooter footer footer menu";
+    grid-template-areas: "header  	 header 	 header header header" "bio         main 		 main   main   menu" "profile     main 		 main   main   menu" "rightfooter rightfooter footer footer menu";
   }
 }
 @media (max-width: 1200px) {
   .grid-container {
-    grid-template-areas: "header header header header header header" "menu   main 	 main 	main 	 main 	main" "menu   main 	 main 	main 	 main 	main" "menu   footer footer footer footer footer";
+    grid-template-areas: "header header header header header header" "menu   main 	 main 	main main 	main" "menu   main 	 main 	main main 	main" "menu   footer footer footer footer footer";
   }
   .grid-container #bio, .grid-container #profile {
     display: none;
